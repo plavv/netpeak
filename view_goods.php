@@ -29,7 +29,7 @@ require_once '_top.php';
                         <?= $value['comment'] ?? '' ?>
                     </td>
                     <td>
-                        <?= date('d.m.Y', strtotime($value['insert_date'])) ?>
+                        <?= $value['insert_date'] ? date('d.m.Y', strtotime($value['insert_date'])) : '' ?>
                     </td>
                 </tr>
             <?php } ?>
